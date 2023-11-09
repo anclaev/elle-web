@@ -5,7 +5,7 @@ import './index.sass'
 
 import App from './App'
 
-import * as sw from './sw/serviceWorkerRegistration'
+import * as sw from './serviceWorkerRegistration'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
@@ -14,4 +14,4 @@ root.render(
   </React.StrictMode>,
 )
 
-if (process.env.NODE_ENV === 'production') sw.register()
+sw.register()
