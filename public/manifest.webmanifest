@@ -15,7 +15,7 @@
   ],
   "theme_color": "#1e1e1e",
   "background_color": "#1e1e1e",
-  "start_url": "https://elle.anclaev.com",
+  "start_url": "https://elle.anclaev.com/",
   "display": "fullscreen",
   "scope": ".",
   "description": "Daughter"

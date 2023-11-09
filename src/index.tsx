@@ -1,17 +1,22 @@
-import ReactDOM from 'react-dom/client'
-import React from 'react'
-
-import './index.sass'
+import { createRoot } from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { StrictMode } from 'react'
 
 import App from './App'
 
 import * as sw from './serviceWorkerRegistration'
+import store from './store'
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+import './index.sass'
+
+const root = createRoot(document.getElementById('root') as HTMLElement)
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </StrictMode>,
 )
 
 sw.register()
